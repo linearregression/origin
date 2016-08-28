@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta name="Author" content="Made by 'tree'">
+ <meta name="GENERATOR" content="$Version: $ tree v1.7.0 (c) 1996 - 2014 by Steve Baker, Thomas Moore, Francesc Rocher, Florian Sesser, Kyosuke Tokoro $">
+ <title>api</title>
+ <style type="text/css">
+  <!-- 
+  BODY { font-family : ariel, monospace, sans-serif; }
+  P { font-weight: normal; font-family : ariel, monospace, sans-serif; color: black; background-color: transparent;}
+  B { font-weight: normal; color: black; background-color: transparent;}
+  A:visited { font-weight : normal; text-decoration : none; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:link    { font-weight : normal; text-decoration : none; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:hover   { color : #000000; font-weight : normal; text-decoration : underline; background-color : yellow; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:active  { color : #000000; font-weight: normal; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  .VERSION { font-size: small; font-family : arial, sans-serif; }
+  .NORM  { color: black;  background-color: transparent;}
+  .FIFO  { color: purple; background-color: transparent;}
+  .CHAR  { color: yellow; background-color: transparent;}
+  .DIR   { color: blue;   background-color: transparent;}
+  .BLOCK { color: yellow; background-color: transparent;}
+  .LINK  { color: aqua;   background-color: transparent;}
+  .SOCK  { color: fuchsia;background-color: transparent;}
+  .EXEC  { color: green;  background-color: transparent;}
+  -->
+ </style>
+</head>
+<body>
+	<h1>api</h1><p>
+	<a href="-c">-c</a><br>
+	├── <a href="-c/README.md">README.md</a><br>
+	├── <a href="-c/api.html">api.html</a><br>
+	├── <a href="-c/definitions/">definitions</a><br>
+	│   ├── <a href="-c/definitions/v1.buildconfig/">v1.buildconfig</a><br>
+	│   │   └── <a href="-c/definitions/v1.buildconfig/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.cindervolumesource/">v1.cindervolumesource</a><br>
+	│   │   └── <a href="-c/definitions/v1.cindervolumesource/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.deploymentconfig/">v1.deploymentconfig</a><br>
+	│   │   └── <a href="-c/definitions/v1.deploymentconfig/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.deploymentlog/">v1.deploymentlog</a><br>
+	│   │   └── <a href="-c/definitions/v1.deploymentlog/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.downwardapivolumefile/">v1.downwardapivolumefile</a><br>
+	│   │   └── <a href="-c/definitions/v1.downwardapivolumefile/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.downwardapivolumesource/">v1.downwardapivolumesource</a><br>
+	│   │   └── <a href="-c/definitions/v1.downwardapivolumesource/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.fsgroupstrategyoptions/">v1.fsgroupstrategyoptions</a><br>
+	│   │   └── <a href="-c/definitions/v1.fsgroupstrategyoptions/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.idrange/">v1.idrange</a><br>
+	│   │   └── <a href="-c/definitions/v1.idrange/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.imagesource/">v1.imagesource</a><br>
+	│   │   └── <a href="-c/definitions/v1.imagesource/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.imagesourcepath/">v1.imagesourcepath</a><br>
+	│   │   └── <a href="-c/definitions/v1.imagesourcepath/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.imagestreamimport/">v1.imagestreamimport</a><br>
+	│   │   └── <a href="-c/definitions/v1.imagestreamimport/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.localresourceaccessreview/">v1.localresourceaccessreview</a><br>
+	│   │   └── <a href="-c/definitions/v1.localresourceaccessreview/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.localsubjectaccessreview/">v1.localsubjectaccessreview</a><br>
+	│   │   └── <a href="-c/definitions/v1.localsubjectaccessreview/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.netnamespace/">v1.netnamespace</a><br>
+	│   │   └── <a href="-c/definitions/v1.netnamespace/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.netnamespacelist/">v1.netnamespacelist</a><br>
+	│   │   └── <a href="-c/definitions/v1.netnamespacelist/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.node/">v1.node</a><br>
+	│   │   └── <a href="-c/definitions/v1.node/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.persistentvolume/">v1.persistentvolume</a><br>
+	│   │   └── <a href="-c/definitions/v1.persistentvolume/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.persistentvolumeclaim/">v1.persistentvolumeclaim</a><br>
+	│   │   └── <a href="-c/definitions/v1.persistentvolumeclaim/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.pod/">v1.pod</a><br>
+	│   │   └── <a href="-c/definitions/v1.pod/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.project/">v1.project</a><br>
+	│   │   └── <a href="-c/definitions/v1.project/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.route/">v1.route</a><br>
+	│   │   └── <a href="-c/definitions/v1.route/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.secretbuildsource/">v1.secretbuildsource</a><br>
+	│   │   └── <a href="-c/definitions/v1.secretbuildsource/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.secretspec/">v1.secretspec</a><br>
+	│   │   └── <a href="-c/definitions/v1.secretspec/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.service/">v1.service</a><br>
+	│   │   └── <a href="-c/definitions/v1.service/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.supplementalgroupsstrategyoptions/">v1.supplementalgroupsstrategyoptions</a><br>
+	│   │   └── <a href="-c/definitions/v1.supplementalgroupsstrategyoptions/description.adoc">description.adoc</a><br>
+	│   ├── <a href="-c/definitions/v1.user/">v1.user</a><br>
+	│   │   └── <a href="-c/definitions/v1.user/description.adoc">description.adoc</a><br>
+	│   └── <a href="-c/definitions/v1beta1.scale/">v1beta1.scale</a><br>
+	│   &nbsp;&nbsp;&nbsp; └── <a href="-c/definitions/v1beta1.scale/description.adoc">description.adoc</a><br>
+	├── <a href="-c/get_tree.sh">get_tree.sh</a><br>
+	├── <a href="-c/name">name</a><br>
+	├── <a href="-c/paths/">paths</a><br>
+	│   └── <a href="-c/paths/list_or_watch_objects_of_kind_persistentvolumeclaim/">list_or_watch_objects_of_kind_persistentvolumeclaim</a><br>
+	│   &nbsp;&nbsp;&nbsp; └── <a href="-c/paths/list_or_watch_objects_of_kind_persistentvolumeclaim/description.adoc">description.adoc</a><br>
+	└── <a href="-c/swagger-spec/">swagger-spec</a><br>
+	&nbsp;&nbsp;&nbsp; ├── <a href="-c/swagger-spec/api-v1.json">api-v1.json</a><br>
+	&nbsp;&nbsp;&nbsp; └── <a href="-c/swagger-spec/oapi-v1.json">oapi-v1.json</a><br>
+	<br><br>
+	</p>
+	<p>
+
+31 directories, 34 files
+	<br><br>
+	</p>
+	<hr>
+	<p class="VERSION">
+		 tree v1.7.0 © 1996 - 2014 by Steve Baker and Thomas Moore <br>
+		 HTML output hacked and copyleft © 1998 by Francesc Rocher <br>
+		 JSON output hacked and copyleft © 2014 by Florian Sesser <br>
+		 Charsets / OS/2 support © 2001 by Kyosuke Tokoro
+	</p>
+</body>
+</html>
