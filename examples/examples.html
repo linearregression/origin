@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta name="Author" content="Made by 'tree'">
+ <meta name="GENERATOR" content="$Version: $ tree v1.7.0 (c) 1996 - 2014 by Steve Baker, Thomas Moore, Francesc Rocher, Florian Sesser, Kyosuke Tokoro $">
+ <title>examples</title>
+ <style type="text/css">
+  <!-- 
+  BODY { font-family : ariel, monospace, sans-serif; }
+  P { font-weight: normal; font-family : ariel, monospace, sans-serif; color: black; background-color: transparent;}
+  B { font-weight: normal; color: black; background-color: transparent;}
+  A:visited { font-weight : normal; text-decoration : none; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:link    { font-weight : normal; text-decoration : none; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:hover   { color : #000000; font-weight : normal; text-decoration : underline; background-color : yellow; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:active  { color : #000000; font-weight: normal; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  .VERSION { font-size: small; font-family : arial, sans-serif; }
+  .NORM  { color: black;  background-color: transparent;}
+  .FIFO  { color: purple; background-color: transparent;}
+  .CHAR  { color: yellow; background-color: transparent;}
+  .DIR   { color: blue;   background-color: transparent;}
+  .BLOCK { color: yellow; background-color: transparent;}
+  .LINK  { color: aqua;   background-color: transparent;}
+  .SOCK  { color: fuchsia;background-color: transparent;}
+  .EXEC  { color: green;  background-color: transparent;}
+  -->
+ </style>
+</head>
+<body>
+	<h1>examples</h1><p>
+	<a href="-c">-c</a><br>
+	├── <a href="-c/README.md">README.md</a><br>
+	├── <a href="-c/atomic-registry/">atomic-registry</a><br>
+	│   ├── <a href="-c/atomic-registry/Makefile">Makefile</a><br>
+	│   ├── <a href="-c/atomic-registry/README.md">README.md</a><br>
+	│   ├── <a href="-c/atomic-registry/allinone/">allinone</a><br>
+	│   │   ├── <a href="-c/atomic-registry/allinone/Dockerfile">Dockerfile</a><br>
+	│   │   ├── <a href="-c/atomic-registry/allinone/README.md">README.md</a><br>
+	│   │   ├── <a href="-c/atomic-registry/allinone/install.sh">install.sh</a><br>
+	│   │   ├── <a href="-c/atomic-registry/allinone/registry-console-template.yaml">registry-console-template.yaml</a><br>
+	│   │   ├── <a href="-c/atomic-registry/allinone/registry-login-template.html">registry-login-template.html</a><br>
+	│   │   ├── <a href="-c/atomic-registry/allinone/run.sh">run.sh</a><br>
+	│   │   └── <a href="-c/atomic-registry/allinone/uninstall.sh">uninstall.sh</a><br>
+	│   ├── <a href="-c/atomic-registry/systemd/">systemd</a><br>
+	│   │   ├── <a href="-c/atomic-registry/systemd/Dockerfile">Dockerfile</a><br>
+	│   │   ├── <a href="-c/atomic-registry/systemd/README.md">README.md</a><br>
+	│   │   ├── <a href="-c/atomic-registry/systemd/install.sh">install.sh</a><br>
+	│   │   ├── <a href="-c/atomic-registry/systemd/services/">services</a><br>
+	│   │   │   ├── <a href="-c/atomic-registry/systemd/services/config/">config</a><br>
+	│   │   │   │   ├── <a href="-c/atomic-registry/systemd/services/config/atomic-registry">atomic-registry</a><br>
+	│   │   │   │   ├── <a href="-c/atomic-registry/systemd/services/config/atomic-registry-console">atomic-registry-console</a><br>
+	│   │   │   │   └── <a href="-c/atomic-registry/systemd/services/config/atomic-registry-master">atomic-registry-master</a><br>
+	│   │   │   └── <a href="-c/atomic-registry/systemd/services/unit_files/">unit_files</a><br>
+	│   │   │   &nbsp;&nbsp;&nbsp; ├── <a href="-c/atomic-registry/systemd/services/unit_files/atomic-registry-console.service">atomic-registry-console.service</a><br>
+	│   │   │   &nbsp;&nbsp;&nbsp; ├── <a href="-c/atomic-registry/systemd/services/unit_files/atomic-registry-master.service">atomic-registry-master.service</a><br>
+	│   │   │   &nbsp;&nbsp;&nbsp; └── <a href="-c/atomic-registry/systemd/services/unit_files/atomic-registry.service">atomic-registry.service</a><br>
+	│   │   ├── <a href="-c/atomic-registry/systemd/setup-atomic-registry.sh">setup-atomic-registry.sh</a><br>
+	│   │   ├── <a href="-c/atomic-registry/systemd/templates/">templates</a><br>
+	│   │   │   ├── <a href="-c/atomic-registry/systemd/templates/oauthclient.yaml">oauthclient.yaml</a><br>
+	│   │   │   └── <a href="-c/atomic-registry/systemd/templates/registry-login-template.html">registry-login-template.html</a><br>
+	│   │   └── <a href="-c/atomic-registry/systemd/uninstall.sh">uninstall.sh</a><br>
+	│   └── <a href="-c/atomic-registry/test.sh">test.sh</a><br>
+	├── <a href="-c/data-population/">data-population</a><br>
+	│   ├── <a href="-c/data-population/README.md">README.md</a><br>
+	│   ├── <a href="-c/data-population/apps.sh">apps.sh</a><br>
+	│   ├── <a href="-c/data-population/common.sh">common.sh</a><br>
+	│   ├── <a href="-c/data-population/limit.yaml">limit.yaml</a><br>
+	│   ├── <a href="-c/data-population/limits.sh">limits.sh</a><br>
+	│   ├── <a href="-c/data-population/populate.sh">populate.sh</a><br>
+	│   ├── <a href="-c/data-population/projects.sh">projects.sh</a><br>
+	│   ├── <a href="-c/data-population/quota.yaml">quota.yaml</a><br>
+	│   ├── <a href="-c/data-population/quotas.sh">quotas.sh</a><br>
+	│   ├── <a href="-c/data-population/service.yaml">service.yaml</a><br>
+	│   ├── <a href="-c/data-population/services.sh">services.sh</a><br>
+	│   ├── <a href="-c/data-population/templates.sh">templates.sh</a><br>
+	│   └── <a href="-c/data-population/users.sh">users.sh</a><br>
+	├── <a href="-c/db-templates/">db-templates</a><br>
+	│   ├── <a href="-c/db-templates/README.md">README.md</a><br>
+	│   ├── <a href="-c/db-templates/mariadb-ephemeral-template.json">mariadb-ephemeral-template.json</a><br>
+	│   ├── <a href="-c/db-templates/mariadb-persistent-template.json">mariadb-persistent-template.json</a><br>
+	│   ├── <a href="-c/db-templates/mongodb-ephemeral-template.json">mongodb-ephemeral-template.json</a><br>
+	│   ├── <a href="-c/db-templates/mongodb-persistent-template.json">mongodb-persistent-template.json</a><br>
+	│   ├── <a href="-c/db-templates/mysql-ephemeral-template.json">mysql-ephemeral-template.json</a><br>
+	│   ├── <a href="-c/db-templates/mysql-persistent-template.json">mysql-persistent-template.json</a><br>
+	│   ├── <a href="-c/db-templates/postgresql-ephemeral-template.json">postgresql-ephemeral-template.json</a><br>
+	│   └── <a href="-c/db-templates/postgresql-persistent-template.json">postgresql-persistent-template.json</a><br>
+	├── <a href="-c/deployment/">deployment</a><br>
+	│   ├── <a href="-c/deployment/Dockerfile">Dockerfile</a><br>
+	│   ├── <a href="-c/deployment/Dockerfile.v2">Dockerfile.v2</a><br>
+	│   ├── <a href="-c/deployment/README.md">README.md</a><br>
+	│   ├── <a href="-c/deployment/bin/">bin</a><br>
+	│   ├── <a href="-c/deployment/deployment.go">deployment.go</a><br>
+	│   └── <a href="-c/deployment/recreate-example.yaml">recreate-example.yaml</a><br>
+	├── <a href="-c/doc.go">doc.go</a><br>
+	├── <a href="-c/etcd/">etcd</a><br>
+	│   ├── <a href="-c/etcd/Dockerfile">Dockerfile</a><br>
+	│   ├── <a href="-c/etcd/Makefile">Makefile</a><br>
+	│   ├── <a href="-c/etcd/README.md">README.md</a><br>
+	│   ├── <a href="-c/etcd/etcd-discovery.sh">etcd-discovery.sh</a><br>
+	│   ├── <a href="-c/etcd/etcd.sh">etcd.sh</a><br>
+	│   └── <a href="-c/etcd/template.json">template.json</a><br>
+	├── <a href="-c/examples.html">examples.html</a><br>
+	├── <a href="-c/examples_test.go">examples_test.go</a><br>
+	├── <a href="-c/get_tree.sh">get_tree.sh</a><br>
+	├── <a href="-c/gitserver/">gitserver</a><br>
+	│   ├── <a href="-c/gitserver/Dockerfile">Dockerfile</a><br>
+	│   ├── <a href="-c/gitserver/README.md">README.md</a><br>
+	│   ├── <a href="-c/gitserver/bin/">bin</a><br>
+	│   ├── <a href="-c/gitserver/gitconfig">gitconfig</a><br>
+	│   ├── <a href="-c/gitserver/gitserver-ephemeral.yaml">gitserver-ephemeral.yaml</a><br>
+	│   ├── <a href="-c/gitserver/gitserver-persistent.yaml">gitserver-persistent.yaml</a><br>
+	│   └── <a href="-c/gitserver/hooks/">hooks</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="-c/gitserver/hooks/detect-language">detect-language</a><br>
+	│   &nbsp;&nbsp;&nbsp; └── <a href="-c/gitserver/hooks/post-receive">post-receive</a><br>
+	├── <a href="-c/glusterfs-image-storage/">glusterfs-image-storage</a><br>
+	│   ├── <a href="-c/glusterfs-image-storage/README.md">README.md</a><br>
+	│   ├── <a href="-c/glusterfs-image-storage/gluster-endpoints.yaml">gluster-endpoints.yaml</a><br>
+	│   ├── <a href="-c/glusterfs-image-storage/gluster-pv.yaml">gluster-pv.yaml</a><br>
+	│   └── <a href="-c/glusterfs-image-storage/gluster-pvc.yaml">gluster-pvc.yaml</a><br>
+	├── <a href="-c/ha/">ha</a><br>
+	│   ├── <a href="-c/ha/README.md">README.md</a><br>
+	│   └── <a href="-c/ha/openshift-ha.yaml">openshift-ha.yaml</a><br>
+	├── <a href="-c/hello-openshift/">hello-openshift</a><br>
+	│   ├── <a href="-c/hello-openshift/Dockerfile">Dockerfile</a><br>
+	│   ├── <a href="-c/hello-openshift/README.md">README.md</a><br>
+	│   ├── <a href="-c/hello-openshift/bin/">bin</a><br>
+	│   ├── <a href="-c/hello-openshift/hello-pod.json">hello-pod.json</a><br>
+	│   ├── <a href="-c/hello-openshift/hello-project.json">hello-project.json</a><br>
+	│   └── <a href="-c/hello-openshift/hello_openshift.go">hello_openshift.go</a><br>
+	├── <a href="-c/image-streams/">image-streams</a><br>
+	│   ├── <a href="-c/image-streams/image-streams-centos7.json">image-streams-centos7.json</a><br>
+	│   └── <a href="-c/image-streams/image-streams-rhel7.json">image-streams-rhel7.json</a><br>
+	├── <a href="-c/jenkins/">jenkins</a><br>
+	│   ├── <a href="-c/jenkins/README.md">README.md</a><br>
+	│   ├── <a href="-c/jenkins/application-template.json">application-template.json</a><br>
+	│   ├── <a href="-c/jenkins/jenkins-ephemeral-template.json">jenkins-ephemeral-template.json</a><br>
+	│   ├── <a href="-c/jenkins/jenkins-persistent-template.json">jenkins-persistent-template.json</a><br>
+	│   ├── <a href="-c/jenkins/master-slave/">master-slave</a><br>
+	│   │   ├── <a href="-c/jenkins/master-slave/README.md">README.md</a><br>
+	│   │   ├── <a href="-c/jenkins/master-slave/configuration/">configuration</a><br>
+	│   │   │   └── <a href="-c/jenkins/master-slave/configuration/jobs/">jobs</a><br>
+	│   │   │   &nbsp;&nbsp;&nbsp; └── <a href="-c/jenkins/master-slave/configuration/jobs/ruby-hello-world-test/">ruby-hello-world-test</a><br>
+	│   │   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="-c/jenkins/master-slave/configuration/jobs/ruby-hello-world-test/config.xml">config.xml</a><br>
+	│   │   ├── <a href="-c/jenkins/master-slave/jenkins-master-template.json">jenkins-master-template.json</a><br>
+	│   │   ├── <a href="-c/jenkins/master-slave/jenkins-slave-template.json">jenkins-slave-template.json</a><br>
+	│   │   ├── <a href="-c/jenkins/master-slave/plugins.txt">plugins.txt</a><br>
+	│   │   └── <a href="-c/jenkins/master-slave/slave/">slave</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; ├── <a href="-c/jenkins/master-slave/slave/Dockerfile">Dockerfile</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; └── <a href="-c/jenkins/master-slave/slave/contrib/">contrib</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="-c/jenkins/master-slave/slave/contrib/openshift/">openshift</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="-c/jenkins/master-slave/slave/contrib/openshift/generate_container_user">generate_container_user</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="-c/jenkins/master-slave/slave/contrib/openshift/run-jnlp-client">run-jnlp-client</a><br>
+	│   └── <a href="-c/jenkins/pipeline/">pipeline</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="-c/jenkins/pipeline/README.md">README.md</a><br>
+	│   &nbsp;&nbsp;&nbsp; └── <a href="-c/jenkins/pipeline/samplepipeline.json">samplepipeline.json</a><br>
+	├── <a href="-c/pets/">pets</a><br>
+	│   ├── <a href="-c/pets/README.md">README.md</a><br>
+	│   ├── <a href="-c/pets/mysql/">mysql</a><br>
+	│   │   ├── <a href="-c/pets/mysql/galera/">galera</a><br>
+	│   │   │   ├── <a href="-c/pets/mysql/galera/README.md">README.md</a><br>
+	│   │   │   ├── <a href="-c/pets/mysql/galera/init/">init</a><br>
+	│   │   │   │   ├── <a href="-c/pets/mysql/galera/init/Dockerfile">Dockerfile</a><br>
+	│   │   │   │   ├── <a href="-c/pets/mysql/galera/init/Makefile">Makefile</a><br>
+	│   │   │   │   ├── <a href="-c/pets/mysql/galera/init/install.sh">install.sh</a><br>
+	│   │   │   │   ├── <a href="-c/pets/mysql/galera/init/my-galera.cnf">my-galera.cnf</a><br>
+	│   │   │   │   └── <a href="-c/pets/mysql/galera/init/on-start.sh">on-start.sh</a><br>
+	│   │   │   ├── <a href="-c/pets/mysql/galera/mysql-galera.yaml">mysql-galera.yaml</a><br>
+	│   │   │   └── <a href="-c/pets/mysql/galera/test.sh">test.sh</a><br>
+	│   │   └── <a href="-c/pets/mysql/healthz/">healthz</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; ├── <a href="-c/pets/mysql/healthz/Dockerfile">Dockerfile</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; ├── <a href="-c/pets/mysql/healthz/Makefile">Makefile</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; ├── <a href="-c/pets/mysql/healthz/README.md">README.md</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; ├── <a href="-c/pets/mysql/healthz/main.go">main.go</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; └── <a href="-c/pets/mysql/healthz/pod.yaml">pod.yaml</a><br>
+	│   ├── <a href="-c/pets/peer-finder/">peer-finder</a><br>
+	│   │   ├── <a href="-c/pets/peer-finder/Dockerfile">Dockerfile</a><br>
+	│   │   ├── <a href="-c/pets/peer-finder/Makefile">Makefile</a><br>
+	│   │   ├── <a href="-c/pets/peer-finder/README.md">README.md</a><br>
+	│   │   └── <a href="-c/pets/peer-finder/peer-finder.go">peer-finder.go</a><br>
+	│   ├── <a href="-c/pets/redis/">redis</a><br>
+	│   │   ├── <a href="-c/pets/redis/README.md">README.md</a><br>
+	│   │   ├── <a href="-c/pets/redis/init/">init</a><br>
+	│   │   │   ├── <a href="-c/pets/redis/init/Dockerfile">Dockerfile</a><br>
+	│   │   │   ├── <a href="-c/pets/redis/init/Makefile">Makefile</a><br>
+	│   │   │   ├── <a href="-c/pets/redis/init/install.sh">install.sh</a><br>
+	│   │   │   └── <a href="-c/pets/redis/init/on-start.sh">on-start.sh</a><br>
+	│   │   ├── <a href="-c/pets/redis/redis.yaml">redis.yaml</a><br>
+	│   │   └── <a href="-c/pets/redis/test.sh">test.sh</a><br>
+	│   └── <a href="-c/pets/zookeeper/">zookeeper</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="-c/pets/zookeeper/README.md">README.md</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="-c/pets/zookeeper/init/">init</a><br>
+	│   &nbsp;&nbsp;&nbsp; │   ├── <a href="-c/pets/zookeeper/init/Dockerfile">Dockerfile</a><br>
+	│   &nbsp;&nbsp;&nbsp; │   ├── <a href="-c/pets/zookeeper/init/Makefile">Makefile</a><br>
+	│   &nbsp;&nbsp;&nbsp; │   ├── <a href="-c/pets/zookeeper/init/install.sh">install.sh</a><br>
+	│   &nbsp;&nbsp;&nbsp; │   ├── <a href="-c/pets/zookeeper/init/on-change.sh">on-change.sh</a><br>
+	│   &nbsp;&nbsp;&nbsp; │   └── <a href="-c/pets/zookeeper/init/on-start.sh">on-start.sh</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="-c/pets/zookeeper/test.sh">test.sh</a><br>
+	│   &nbsp;&nbsp;&nbsp; └── <a href="-c/pets/zookeeper/zookeeper.yaml">zookeeper.yaml</a><br>
+	├── <a href="-c/privileged-pod-pvc/">privileged-pod-pvc</a><br>
+	│   ├── <a href="-c/privileged-pod-pvc/README.md">README.md</a><br>
+	│   ├── <a href="-c/privileged-pod-pvc/gluster-endpoints-service.yaml">gluster-endpoints-service.yaml</a><br>
+	│   ├── <a href="-c/privileged-pod-pvc/gluster-endpoints.yaml">gluster-endpoints.yaml</a><br>
+	│   ├── <a href="-c/privileged-pod-pvc/gluster-nginx-priv-pod.yaml">gluster-nginx-priv-pod.yaml</a><br>
+	│   ├── <a href="-c/privileged-pod-pvc/gluster-pv.yaml">gluster-pv.yaml</a><br>
+	│   └── <a href="-c/privileged-pod-pvc/gluster-pvc.yaml">gluster-pvc.yaml</a><br>
+	├── <a href="-c/project-quota/">project-quota</a><br>
+	│   ├── <a href="-c/project-quota/README.md">README.md</a><br>
+	│   ├── <a href="-c/project-quota/application-template-with-resources.json">application-template-with-resources.json</a><br>
+	│   ├── <a href="-c/project-quota/limits.yaml">limits.yaml</a><br>
+	│   ├── <a href="-c/project-quota/pod-with-resources.yaml">pod-with-resources.yaml</a><br>
+	│   ├── <a href="-c/project-quota/pod-without-resources.yaml">pod-without-resources.yaml</a><br>
+	│   └── <a href="-c/project-quota/quota.yaml">quota.yaml</a><br>
+	├── <a href="-c/project-spawner/">project-spawner</a><br>
+	│   └── <a href="-c/project-spawner/project-spawner.sh">project-spawner.sh</a><br>
+	├── <a href="-c/quickstarts/">quickstarts</a><br>
+	│   ├── <a href="-c/quickstarts/README.md">README.md</a><br>
+	│   ├── <a href="-c/quickstarts/cakephp-mysql.json">cakephp-mysql.json</a><br>
+	│   ├── <a href="-c/quickstarts/dancer-mysql.json">dancer-mysql.json</a><br>
+	│   ├── <a href="-c/quickstarts/django-postgresql.json">django-postgresql.json</a><br>
+	│   ├── <a href="-c/quickstarts/nodejs-mongodb.json">nodejs-mongodb.json</a><br>
+	│   └── <a href="-c/quickstarts/rails-postgresql.json">rails-postgresql.json</a><br>
+	├── <a href="-c/sample-app/">sample-app</a><br>
+	│   ├── <a href="-c/sample-app/README.md">README.md</a><br>
+	│   ├── <a href="-c/sample-app/application-template-custombuild.json">application-template-custombuild.json</a><br>
+	│   ├── <a href="-c/sample-app/application-template-dockerbuild.json">application-template-dockerbuild.json</a><br>
+	│   ├── <a href="-c/sample-app/application-template-pullspecbuild.json">application-template-pullspecbuild.json</a><br>
+	│   ├── <a href="-c/sample-app/application-template-stibuild.json">application-template-stibuild.json</a><br>
+	│   ├── <a href="-c/sample-app/cleanup.sh">cleanup.sh</a><br>
+	│   ├── <a href="-c/sample-app/container-setup.md">container-setup.md</a><br>
+	│   ├── <a href="-c/sample-app/github-webhook-example.json">github-webhook-example.json</a><br>
+	│   ├── <a href="-c/sample-app/logs/">logs</a><br>
+	│   └── <a href="-c/sample-app/pullimages.sh">pullimages.sh</a><br>
+	├── <a href="-c/storage-examples/">storage-examples</a><br>
+	│   ├── <a href="-c/storage-examples/README.md">README.md</a><br>
+	│   ├── <a href="-c/storage-examples/gluster-examples/">gluster-examples</a><br>
+	│   │   ├── <a href="-c/storage-examples/gluster-examples/README.md">README.md</a><br>
+	│   │   ├── <a href="-c/storage-examples/gluster-examples/images/">images</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/images/Add_to_Project_button.png">Add_to_Project_button.png</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/images/Screenshot-22.png">Screenshot-22.png</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/images/example1_ose.png">example1_ose.png</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/images/example2_ose.png">example2_ose.png</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/images/example3_ose.png">example3_ose.png</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/images/example4_ose_existing_pvc.png">example4_ose_existing_pvc.png</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/images/example4_ose_template.png">example4_ose_template.png</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/images/example4_ose_template2.png">example4_ose_template2.png</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/images/example4_show_template.png">example4_show_template.png</a><br>
+	│   │   │   └── <a href="-c/storage-examples/gluster-examples/images/example4_template_running.png">example4_template_running.png</a><br>
+	│   │   ├── <a href="-c/storage-examples/gluster-examples/nginx_gluster_host/">nginx_gluster_host</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/nginx_gluster_host/README.md">README.md</a><br>
+	│   │   │   └── <a href="-c/storage-examples/gluster-examples/nginx_gluster_host/local-nginx-gluster-pod.json">local-nginx-gluster-pod.json</a><br>
+	│   │   ├── <a href="-c/storage-examples/gluster-examples/nginx_gluster_plugin/">nginx_gluster_plugin</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/nginx_gluster_plugin/README.md">README.md</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/nginx_gluster_plugin/gluster-endpoints.json">gluster-endpoints.json</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/nginx_gluster_plugin/gluster-nginx-pod.json">gluster-nginx-pod.json</a><br>
+	│   │   │   └── <a href="-c/storage-examples/gluster-examples/nginx_gluster_plugin/gluster-service.json">gluster-service.json</a><br>
+	│   │   ├── <a href="-c/storage-examples/gluster-examples/nginx_gluster_pvc/">nginx_gluster_pvc</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/nginx_gluster_pvc/README.md">README.md</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/nginx_gluster_pvc/gluster-endpoints.json">gluster-endpoints.json</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/nginx_gluster_pvc/gluster-nginx-pv.json">gluster-nginx-pv.json</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/nginx_gluster_pvc/gluster-nginx-pv2.json">gluster-nginx-pv2.json</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/nginx_gluster_pvc/gluster-nginx-pvc-pod.json">gluster-nginx-pvc-pod.json</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/nginx_gluster_pvc/gluster-nginx-pvc-pod2.json">gluster-nginx-pvc-pod2.json</a><br>
+	│   │   │   ├── <a href="-c/storage-examples/gluster-examples/nginx_gluster_pvc/gluster-nginx-pvc.json">gluster-nginx-pvc.json</a><br>
+	│   │   │   └── <a href="-c/storage-examples/gluster-examples/nginx_gluster_pvc/gluster-nginx-pvc2.json">gluster-nginx-pvc2.json</a><br>
+	│   │   └── <a href="-c/storage-examples/gluster-examples/nginx_template/">nginx_template</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; ├── <a href="-c/storage-examples/gluster-examples/nginx_template/README.md">README.md</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; ├── <a href="-c/storage-examples/gluster-examples/nginx_template/README.md~">README.md~</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; ├── <a href="-c/storage-examples/gluster-examples/nginx_template/gluster-nginx-pv.json">gluster-nginx-pv.json</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; ├── <a href="-c/storage-examples/gluster-examples/nginx_template/gluster-nginx-pvc.json">gluster-nginx-pvc.json</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; └── <a href="-c/storage-examples/gluster-examples/nginx_template/gluster-nginx-template.json">gluster-nginx-template.json</a><br>
+	│   └── <a href="-c/storage-examples/local-storage-examples/">local-storage-examples</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="-c/storage-examples/local-storage-examples/README.md">README.md</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="-c/storage-examples/local-storage-examples/README.md~">README.md~</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="-c/storage-examples/local-storage-examples/example1_ose_local.png">example1_ose_local.png</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="-c/storage-examples/local-storage-examples/images/">images</a><br>
+	│   &nbsp;&nbsp;&nbsp; │   └── <a href="-c/storage-examples/local-storage-examples/images/example1_ose_local.png">example1_ose_local.png</a><br>
+	│   &nbsp;&nbsp;&nbsp; └── <a href="-c/storage-examples/local-storage-examples/local-nginx-pod.json">local-nginx-pod.json</a><br>
+	├── <a href="-c/wordpress/">wordpress</a><br>
+	│   ├── <a href="-c/wordpress/README.md">README.md</a><br>
+	│   ├── <a href="-c/wordpress/cinder/">cinder</a><br>
+	│   │   ├── <a href="-c/wordpress/cinder/README.md">README.md</a><br>
+	│   │   ├── <a href="-c/wordpress/cinder/pv-1.yaml">pv-1.yaml</a><br>
+	│   │   └── <a href="-c/wordpress/cinder/pv-2.yaml">pv-2.yaml</a><br>
+	│   ├── <a href="-c/wordpress/fc/">fc</a><br>
+	│   │   ├── <a href="-c/wordpress/fc/README.md">README.md</a><br>
+	│   │   ├── <a href="-c/wordpress/fc/pv-1.yaml">pv-1.yaml</a><br>
+	│   │   └── <a href="-c/wordpress/fc/pv-2.yaml">pv-2.yaml</a><br>
+	│   ├── <a href="-c/wordpress/nfs/">nfs</a><br>
+	│   │   ├── <a href="-c/wordpress/nfs/README.md">README.md</a><br>
+	│   │   ├── <a href="-c/wordpress/nfs/pv-1.yaml">pv-1.yaml</a><br>
+	│   │   └── <a href="-c/wordpress/nfs/pv-2.yaml">pv-2.yaml</a><br>
+	│   ├── <a href="-c/wordpress/pod-mysql.yaml">pod-mysql.yaml</a><br>
+	│   ├── <a href="-c/wordpress/pod-wordpress.yaml">pod-wordpress.yaml</a><br>
+	│   ├── <a href="-c/wordpress/pvc-mysql.yaml">pvc-mysql.yaml</a><br>
+	│   ├── <a href="-c/wordpress/pvc-wp.yaml">pvc-wp.yaml</a><br>
+	│   ├── <a href="-c/wordpress/service-mysql.yaml">service-mysql.yaml</a><br>
+	│   ├── <a href="-c/wordpress/service-wp.yaml">service-wp.yaml</a><br>
+	│   └── <a href="-c/wordpress/template/">template</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="-c/wordpress/template/README.md">README.md</a><br>
+	│   &nbsp;&nbsp;&nbsp; └── <a href="-c/wordpress/template/wordpress-mysql.json">wordpress-mysql.json</a><br>
+	└── <a href="-c/zookeeper/">zookeeper</a><br>
+	&nbsp;&nbsp;&nbsp; ├── <a href="-c/zookeeper/Dockerfile">Dockerfile</a><br>
+	&nbsp;&nbsp;&nbsp; ├── <a href="-c/zookeeper/README.md">README.md</a><br>
+	&nbsp;&nbsp;&nbsp; ├── <a href="-c/zookeeper/config-and-run.sh">config-and-run.sh</a><br>
+	&nbsp;&nbsp;&nbsp; ├── <a href="-c/zookeeper/teardown.sh">teardown.sh</a><br>
+	&nbsp;&nbsp;&nbsp; ├── <a href="-c/zookeeper/template.json">template.json</a><br>
+	&nbsp;&nbsp;&nbsp; └── <a href="-c/zookeeper/zoo-template.cfg">zoo-template.cfg</a><br>
+	<br><br>
+	</p>
+	<p>
+
+60 directories, 216 files
+	<br><br>
+	</p>
+	<hr>
+	<p class="VERSION">
+		 tree v1.7.0 © 1996 - 2014 by Steve Baker and Thomas Moore <br>
+		 HTML output hacked and copyleft © 1998 by Francesc Rocher <br>
+		 JSON output hacked and copyleft © 2014 by Florian Sesser <br>
+		 Charsets / OS/2 support © 2001 by Kyosuke Tokoro
+	</p>
+</body>
+</html>
